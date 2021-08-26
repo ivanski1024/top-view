@@ -1,12 +1,12 @@
 import express from "express";
 import logger from "winston";
-import users from "../controllers/userController";
+import usersController from "../controllers/userController";
 
 const router = express.Router();
 
 router.get("/", async (req, res) => {
     try {
-        res.send(await users.getUsersId());
+        res.send(await usersController.getUsersId());
     } catch (error) {
         logger.error(error);
         res.status(500).send();
@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
 
 router.get("/:user_id", async (req, res) => {
     try {
-        const user = await users.getUser(req.params.user_id);
+        const user = await usersController.getUser(req.params.user_id);
 
         if (!user) {
             res.status(404).send();

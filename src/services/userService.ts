@@ -5,7 +5,6 @@ const cache: {[key: string]: any} = {};
 
 const UsersService = {
     async getUsers(): Promise<UsersInfo> {
-
         if(!cache.users) {
             await axios.get(process.env.USERS_URL).then((data) => {
                 cache.users = data.data;
