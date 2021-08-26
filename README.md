@@ -3,15 +3,14 @@
 Prerequisites:
 
  - node
- - npm 
- - typescript
+ - npm
+ - typescript (globally)
+ 
+```npm install typescript -g```
 
 Instructions:
 
-Fork Repo
 Clone Repo
-Install Dependencies
+Install Dependencies by `npm install`
 Run the server by `npm start`
-
-Run
-```npm install typescript -g```
+While server is running, on a second terminal run tests by `npm test`
