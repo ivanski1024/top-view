@@ -5,7 +5,6 @@ import users from "../controllers/userController";
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-
     try {
         res.send(await users.getUsersId());
     } catch (error) {

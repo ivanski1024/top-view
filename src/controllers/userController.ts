@@ -1,4 +1,3 @@
-import axios from "axios";
 import UsersService from "../services/userService";
 import { UserProfile, UsersBio, UsersImages, UsersInfo } from "../models/userModels";
 

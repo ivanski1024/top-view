@@ -1,4 +1,3 @@
-//tslint:disable
 export interface UserProfile {
     name: string
     email: string

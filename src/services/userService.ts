@@ -1,5 +1,5 @@
 import axios from "axios";
-import { UserProfile, UsersBio, UsersImages, UsersInfo } from "../models/userModels";
+import { UsersBio, UsersImages, UsersInfo } from "../models/userModels";
 
 const cache: {[key: string]: any} = {};
 
