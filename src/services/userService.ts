@@ -9,9 +9,9 @@ const UsersService = {
         if(!cache.users) {
             await axios.get(process.env.USERS_URL).then((data) => {
                 cache.users = data.data;
-                Promise.resolve();
+                return Promise.resolve();
             }).catch(error => {
-                Promise.reject(error);
+                return Promise.reject(error);
             });
         }
 
@@ -23,9 +23,9 @@ const UsersService = {
         if(!cache.usersImages) {
             await axios.get(process.env.USERS_IMAGES_URL).then(data => {
                 cache.userImages = data.data;
-                Promise.resolve();
+                return Promise.resolve();
             }).catch(error => {
-                Promise.reject(error);
+                return Promise.reject(error);
             });
         }
 
@@ -37,8 +37,9 @@ const UsersService = {
         if(!cache.usersBios) {
             await axios.get(process.env.USERS_BIO_URL).then(data => {
                 cache.usersBios = data.data
+                return Promise.resolve();
             }).catch(error => {
-                Promise.reject(error);
+                return Promise.reject(error);
             });
         }
 
